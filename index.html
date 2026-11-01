@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="is">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bylgja VE-75 – Mælaborð áhafnar</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#7a1418">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Bylgja VE-75">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<style>
+ html,body{margin:0;height:100%;background:#0f1419;color:#fff;font-family:system-ui,-apple-system,sans-serif}
+ main{min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:24px;text-align:center}
+ img{width:96px;height:96px;border-radius:22px}
+ a{display:inline-block;padding:14px 22px;border-radius:999px;background:#7a1418;color:#fff;text-decoration:none;font-size:18px}
+</style>
+</head>
+<body>
+<main>
+ <img src="icon-192.png" alt="">
+ <h1 style="margin:0;font-size:22px">Bylgja VE-75 – Mælaborð áhafnar</h1>
+ <a id="go" href="https://bylgja-ve-75-crew-dashboard-fptc.pages.grok.bot/">Opna mælaborðið</a>
+</main>
+<script>
+ if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js", { scope: "./" });
+ // Opened from the home-screen icon: go straight to the dashboard.
+ if (matchMedia("(display-mode: standalone)").matches || navigator.standalone) location.replace(document.getElementById("go").href);
+</script>
+</body>
+</html>
